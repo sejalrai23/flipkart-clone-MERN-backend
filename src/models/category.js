@@ -17,6 +17,9 @@ const CategorySchema = new mongoose.Schema({
     },
     parentId:{ 
             type: String 
+    },
+    type:{
+        type:String,
     }
 
 

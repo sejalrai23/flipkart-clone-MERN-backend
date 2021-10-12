@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const {initialData} = require('../../controller/admin/initialData');
+const { initialData } = require('../../controller/admin/initialData');
+const { requireSignin } = require("../../common-middleware/index");
 
 
-router.post('/initialData', initialData);
+router.post('/initialData', requireSignin, initialData);
 
 
 

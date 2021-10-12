@@ -9,6 +9,7 @@ const categoryRoutes = require('./routes/category');
 const productRoutes = require("./routes/product");
 const cartRoutes = require("./routes/cart");
 const initialData = require("./routes/admin/initialData");
+const pageRoutes = require("./routes/admin/page");
 const path = require("path");
 const cors = require('cors');
 
@@ -35,6 +36,7 @@ app.use('/', categoryRoutes);
 app.use('/', productRoutes);
 app.use('/', cartRoutes);
 app.use('/', initialData);
+app.use('/', pageRoutes);
 app.listen(process.env.PORT, () => {
     console.log(`server is running on port ${process.env.PORT}`);
 });
